@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="sample.css">
     <link rel="stylesheet" type="text/css" href="paper.leg.css">
+    
+    <!-- SPIRIT DEPENDENCIES include the runtime-->
+<script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
+<!--script to play the created animation-->
+<script>
+  spirit.setup().then(() => { // load GSAP from CDN
+    spirit.load('animation.json').then(groups => { // load animation data
+      groups.at(0).construct().play() // construct first group and play it
+    })
+  })
+</script>
+
 </head>
 
 <body>
